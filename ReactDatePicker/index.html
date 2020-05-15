@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample DatePicker React component</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        div {
+            margin-bottom: 1em;
+        }
+
+        select,
+        input {
+            font-size: 80%;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #0a8de4;
+            border: none;
+            color: white;
+            padding: 5px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        form {
+            max-width: max-content;
+        }
+
+        .Day {
+            width: 60px;
+        }
+
+        .Year {
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <div id="displayableDate"></div>
+    <div id="transferableDate"></div>
+    <hr />
+    <h2>Features:</h2>
+    <ul>
+        <li>
+            The component distinguishes 2 key concepts in dealing with JavaScript dates issues:
+            the transferable date, and the displayable date.
+        </li>
+        <li>
+            What it effectively means is, it is specifically designed to work with both + and - timezones.
+        </li>
+        <li>
+            It calls user-provided callback functions and passes respectively both dates as arguments to them.
+            This is the way it communicates with the outside world.
+        </li>
+        <li>
+            The component can be initialized with user-provided date in the form of pure object with day, month
+            and year properties. It is the responsibility of a user to make sure these values are correct. Typically
+            those values should be populated using the getUTC... APIs of a Date object.
+        </li>
+        <li>
+            It is actually a playground when learning React, thus it is not complete by any means.
+            However, it is already fully functional and can be used as a foundation for target implementation.
+        </li>
+    </ul>
+</body>
+
+
+<script type="text/babel">
+
+    // Sample global code to interact with the component BEGIN
+
+    var myTransferableDate = null;
+    var myDisplayableDate = null;
+
+    function setTransferableDate(newTransferableDate) {
+        myTransferableDate = newTransferableDate;
+        document.getElementById('transferableDate').innerText = 'Transferable date: ' + myTransferableDate?.toString();
+    }
+
+    function setDisplayableDate(newDisplayableDate) {
+        myDisplayableDate = newDisplayableDate;
+        document.getElementById('displayableDate').innerText = 'Displayable date: ' + myDisplayableDate?.toString();
+    }
+
+    // Sample global code to interact with the component END
+
+    class DatePicker extends React.Component {
+        static _initialState = {
+            day: 1,
+            month: 1,
+            year: 1900,
+            date: null
+        };
+
+        static _months = [
+            { "name": "January", value: 1 },
+            { "name": "February", value: 2 },
+            { "name": "March", value: 3 },
+            { "name": "April", value: 4 },
+            { "name": "May", value: 5 },
+            { "name": "June", value: 6 },
+            { "name": "July", value: 7 },
+            { "name": "August", value: 8 },
+            { "name": "September", value: 9 },
+            { "name": "October", value: 10 },
+            { "name": "November", value: 11 },
+            { "name": "December", value: 12 }
+        ];
+
+        static _borderNormalStyle = {
+            padding: '3px 3px 3px 3px',
+            border: '1px solid darkgray'
+        };
+
+        static _borderErrorStyle = {
+            padding: '3px 3px 3px 3px',
+            border: '2px solid red'
+        };
+
+        constructor(props) {
+            super(props);
+            this.onChange = this.onChange.bind(this);
+            let initialValue = this.props?.initialValue;
+            if (!!initialValue && !!initialValue.day && !!initialValue.month && !!initialValue.year) {
+                this.state = { ...initialValue, date: null };
+            } else {
+                this.state = DatePicker._initialState;
+            }
+        }
+
+        componentDidMount() {
+            this.makeDate();
+        }
+
+        onChange(whatChanged, event) {
+            if (whatChanged === 'd') {
+                let dayInt = parseInt(event.target.value);
+
+                // Very basic day number validation
+                if (isNaN(dayInt) || dayInt < 1 || dayInt > 31) {
+                    dayInt = 1;
+                }
+
+                this.setState({ day: dayInt });
+            }
+            else if (whatChanged === 'm') {
+                this.setState({ month: parseInt(event.target.value) });
+            }
+            else if (whatChanged === 'y') {
+                let yearInt = parseInt(event.target.value);
+
+                // Very basic year number validation
+                if (isNaN(yearInt) || yearInt < 1900 || yearInt > 2100) {
+                    yearInt = 1900;
+                }
+
+                this.setState({ year: yearInt });
+            }
+
+            this.makeDate();
+        }
+
+        makeDate() {
+            this.setState((prevState) => {
+                let result = null;
+
+                // The key thing is to distinguish between a transferable (with offset) and a displayable date (without one)
+                let displayableDate = null;
+
+                // The trick with new Date(Date.UTC(...)) allows for creation of the date with an offset
+                // The internal state relies on the transferable date value
+                let transferableDate = new Date(Date.UTC(prevState.year, prevState.month - 1, prevState.day));
+
+                let theDateIsTechnicallyCorrect = !isNaN(transferableDate);
+                // Unfortunately, JavaScript can create a date with wrong day number. It's value will be just shifted
+                // In here we detect such condition
+                let theDateIsValidCalendarDate = prevState.day === transferableDate.getUTCDate();
+
+                if (theDateIsTechnicallyCorrect && theDateIsValidCalendarDate) {
+                    result = { date: transferableDate };
+                    displayableDate = new Date(
+                        transferableDate.getUTCFullYear(), transferableDate.getUTCMonth(), transferableDate.getUTCDate()
+                    );
+                    this.props.setTransferableDateCallback?.(transferableDate);
+                    this.props.setDisplayableDateCallback?.(displayableDate);
+                } else if (theDateIsTechnicallyCorrect && !theDateIsValidCalendarDate) {
+                    result = {
+                        date: null
+                    };
+                    this.props.setTransferableDateCallback?.(null);
+                    this.props.setDisplayableDateCallback?.(null)
+                } else {
+                    result = DatePicker._initialState;;
+                }
+
+                return result;
+            });
+        }
+
+        render() {
+            const style = !!this.state.date ? DatePicker._borderNormalStyle : DatePicker._borderErrorStyle;
+            return (
+                <div>
+                    <form style={style}>
+                        <input
+                            className={'Day'}
+                            type="number"
+                            onChange={(event) => this.onChange('d', event)} value={this.state.day}
+                        />
+                        &nbsp;
+                        <select
+                            className={'Month'}
+                            onChange={(event) => this.onChange('m', event)} value={this.state.month}
+                        >
+                            {DatePicker._months.map((m) => (<option key={m.value} value={`${m.value}`}>{`${m.name}`}</option>))}
+                        </select>
+                        &nbsp;
+                        <input
+                            className={'Year'}
+                            type="number"
+                            value={this.state.year}
+                            onChange={(event) => this.onChange('y', event)}
+                        />
+                    </form>
+                </div>
+            )
+        }
+    }
+
+    ReactDOM.render(
+        <DatePicker
+            setTransferableDateCallback={setTransferableDate}
+            setDisplayableDateCallback={setDisplayableDate}
+            initialValue={{ day: 1, month: 1, year: 2000 }}
+        />,
+        document.getElementById("root")
+    );
+
+</script>
+
+</html>
