@@ -8,997 +8,162 @@
     <title>Peg</title>
 
     <style type="text/css">
-        @page {
-            size: 21cm 29.7cm;
-            margin-left: 2cm;
-            margin-right: 2.6cm;
-            margin-top: 2cm;
-            margin-bottom: 2cm
+        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+        q:before {
+            content: "„"
+        }
+
+        q:after {
+            content: "”"
+        }
+
+        p:first-child {
+            margin-top: 0;
         }
 
         p {
-            line-height: 165%;
-            background: transparent
+            line-height: 175%;
+        }
+
+        .A {
+            color: #2A54D2;
+        }
+
+        .B {
+            color: #464646;
+        }
+
+        article {
+            text-align: justify;
         }
 
         body {
-            margin-left: 20%;
-            margin-right: 20%;
+            font-family: 'Inter', Tahoma, Arial, sans-serif;
+            font-size: 12pt;
+        }
+
+        @media only screen {
+            body {
+                background-color: #fffbe0;
+            }
+
+            article {
+                background-color: snow;
+                padding: 35px 35px;
+                margin-top: 35px;
+                margin-bottom: 35px;
+                border-style: ridge;
+                border-color: darkgrey;
+                border-width: 1px;
+                box-shadow: 0 0.1em 13px 0 rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        @media only screen and (orientation:landscape) {
+            article {
+                margin-left: auto;
+                margin-right: auto;
+                width: 40rem;
+            }
         }
     </style>
 </head>
 
-<body lang="pl-PL" link="#000080" vlink="#800000" dir="ltr">
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">Bo ja <font color="#000000">trochę</font>
-            techniczny jestem, więc wrzucę parę uwag z moich
-            bardzo dawnych i skromnych doświadczeń w tych sprawach.
-            Wirusy komputerowe działają w odwrotnej kolejności,
-            niż wszyscy sądzą. </font>
-    </p>
-
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Obecnie
-                nie mówi się już o &bdquo;wirusach&rdquo;, ale o
-                szerszej kategorii: po prostu &bdquo;złośliwego
-                oprogramowania&rdquo;,<i> malware</i><span style="font-style: normal">,</span><i>
-                    malicious software. </i>Wirusy kojarzą mi się z węższą
-                kategorią, typową przed rokiem 2000 (ewentualnie we
-                wczesnych latach 200x), której główną cechą
-                jest zdolność do zautomatyzowanego kopiowania się na
-                inne komputery. Ten rodzaj oprogramowania obecnie jest bardzo rzadki,
-                natomiast jest mnóstwo innych nowych kategorii jak np.
-                ransomware, czyli oprogramowanie, które (w uproszczeniu)
-                kradnie dane i żąda okupu w zamian za (niepewną)
-                obietnicę ich zwrotu. </font>
-        </font>
-    </p>
-
-
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">Otóż
-            najpierw jakiś młody zdolny informatyk odkrywa, że w
-            poważnym oprogramowaniu istnieje błąd. </font>
-    </p>
-
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Tak
-                jest, z tym, że wcale niekoniecznie młody. Takich ludzi
-                zwyczajowo nazywa się badaczami bezpieczeństwa, <i>security
-                    researchers</i><span style="font-style: normal">. </span><span
-                    style="font-style: normal">Niekoniecznie
-                    ograniczają się do &bdquo;poważnego&rdquo;
-                    oprogramowania. </span><span style="font-style: normal">Szukają
-                    oni tzw. podatności,</span><i> vulnerabilities</i><span style="font-style: normal">,
-                    czyli nieoczywistych cech tego oprogramowania, które mogą
-                    być złośliwie wykorzystane. Podatności są w
-                    zasadzie skutkiem błędów w oprogramowaniu</span><span style="font-style: normal">.
-                </span><span style="font-style: normal">Wszelkim oprogramowaniu,
-                    niekoniecznie od razu &bdquo;poważnym&rdquo; &ndash; w
-                    rozumieniu, iż napisanym przez znaną, wielką firmę.</span><span style="font-style: normal">
-                </span></font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt"><span style="font-style: normal">K</span><span
-                    style="font-style: normal">ategoria
-                </span><span style="font-style: normal">badaczy jest też dość
-                    szeroka</span><span style="font-style: normal">, w jej obrębie
-                    są specjalizacje </span><span style="font-style: normal">rozróżniające
-                    podatności np. w oprogramowaniu wykonywanym na komputerze
-                    użytkownika od </span><span style="font-style: normal">np.
-                </span><span style="font-style: normal">podatności w aplikacjach
-                    internetowych. Badacz zazwyczaj ma swoją dziedzinę, którą
-                    się zajmuje. </span><span style="font-style: normal">W
-                    kontekście </span><span style="font-style: normal">złośliwego
-                    oprogramowania</span><span style="font-style: normal"> istotne jest
-                    to, że </span><span style="font-style: normal"> badacze
-                </span><span style="font-style: normal">poszukują podatności,
-                    które nadają się do wykorzystania w celu
-                    przeprowadzenia różnych złośli</span><span style="font-style: normal">wy</span><span
-                    style="font-style: normal">ch
-                    działań np. uzyskania dostępu do danych, przejęcia
-                    kontroli nad działającym oprogramowaniem itd. </span></font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt"><span style="font-style: normal">Istnieją
-                    też podatności lub błędy, które nie są
-                    szkodliwe, albo w gruncie rzeczy nie są wcale błędem;
-                    albo są błędem, ale nie </span><span style="font-style: normal">błędem
-                </span><span style="font-style: normal">programisty, tylko analityka
-                    procesu biznesowego, </span><span style="font-style: normal">który
-                    &bdquo;ogarnia&rdquo; szerszy cel produk</span><span style="font-style: normal">owania</span><span
-                    style="font-style: normal">
-                    oprogramowani</span><span style="font-style: normal">a</span><span style="font-style: normal">.
-                    W branży często żartobliwie mówi się
-                    wówczas &bdquo;</span><i>it&rsquo;s not a bug, it&rsquo;s a
-                    feature</i><span style="font-style: normal">&rdquo;.</span></font>
-        </font>
-    </p>
-
-
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">Ta
-            informacja rozpływa się po kręgach hackerskich lub
-            zostaje sprzedana (za ciężkie pieniądze) jednej z
-            wielu grup hackerów. </font>
-    </p>
-
-
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Pozyskiwanie
-                tej wiedzy to cały przemysł i rynek. Są ludzie, którzy
-                żyją z tego, że sprzedają tę wiedzę do
-                dużych firm w ramach inicjatyw tzw. <i>bug</i><span style="font-style: normal">
-                </span><i>bounty</i><span style="font-style: normal">. Duże
-                    firmy są skłonne płacić ludziom z zewnątrz
-                    za znalezienie groźnych błędów, które z
-                    różnych prz</span><span style="font-style: normal">y</span><span style="font-style: normal">czyn
-                    nie zostały wyeliminowane przez ich własnych programistów.
-                    Czasami jednak ktoś inny jest w stanie zapłacić za tę
-                    wiedzę </span><span style="font-style: normal">jeszcze </span><span
-                    style="font-style: normal">więcej.
-                    Np. państwowe służby specjalne, albo producent
-                    profesjonalnego oprogramowania szpiegującego jak np. Pegasus.
-                    &bdquo;Grupy hackerów&rdquo; to tylko niewielki element
-                    znacznie większej układanki.</span></font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">Ci
-            piszą oprogramowanie umożliwiające wejście w tą
-            lukę bezpieczeństwa. </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Generalnie
-                tak. Takie oprogramowanie piszą profesjonalni programiści
-                i/lub hakerzy. Potrzebne tutaj są ponadprzeciętne
-                kompetencje, ponieważ mówimy o pisaniu programu w sposób
-                zupełnie odmienny od podręcznikowego. Należy
-                wykorzystać przy tym te kupione od badacza zaobserwowane
-                właściwości i zachowania w oprogramowaniu, które
-                nie są opisane w żadnym innym źródle informacji
-                (zakładając, że badacz był jedyną osobą,
-                która znalazła podatność) i nie ma absolutnie
-                żadnych gwarancji do absolutnie żadnego aspektu ich
-                działania. Te właściwości i zachowania mogą
-                być bardzo niestabilne, w sensie &ndash; raz działać,
-                a raz nie działać w zależności od, trudno
-                właściwie określić czego. Generalnie, rozwiązanie
-                techniczne na którym opiera się taki Pegasus jest trochę
-                taką prowizorką posklecaną na sznurki i taśmę
-                klejącą. Wiadomo na przykład, że Pegasus nie był
-                w stanie przetrwać restartu urządzenia. To swoją drogą
-                tworzy ciekawą okazję dla wszelkich aferzystów,
-                ponieważ powstaje pytanie jak liczyć tzw. włamania.
-                Czy włamaniem jest sam fakt ukierunkowania ataku na konkretną
-                osobę (liczymy jeden raz), czy liczymy ile razy Pegasus został
-                uruchomiony na urządzeniu ofiary. Jeśli ofiara często
-                wyłączała telefon, to możemy wtedy podać
-                komunikat medialny, że ofiara była infekowana powiedzmy 57
-                razy, a tak naprawdę po prostu tyle razy restartowała
-                telefon. </font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Aspekt
-                niestabilności należy też przywołać w
-                kontekście wątku Twitter&rsquo;owego na temat śladów
-                pozostawionych przez Pegasusa. Wyciąga się tam, skądinąd
-                słuszne, wnioski, że Pegasus musiał być niskiej
-                jakości produktem, skoro pozostawił ślady. Bardzo
-                możliwe, że ze względu właśnie na tę
-                &bdquo;prowizorkę&rdquo; w postaci błędu, która
-                jest fundamentem działania Pegasusa, nie było nawet
-                technicznej możliwości, żeby nie zostawić śladów
-                (pamiętajmy, że cały czas mówimy o programie,
-                który działa nie w oparciu o programistyczną
-                dokumentację firmy Apple, tylko w <span lang="pl-PL">oparciu</span>
-                o zauważenie specyficznych zachowań oprogramowania w
-                specyficznych okolicznościach). </font>
-        </font>
-    </p>
-
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Warto
-                również w tym kontekście odnieść się
-                do tweet&rsquo;a, którego istotą jest próba
-                uargumentowania, dlaczego możemy uważać, że nie
-                był to zbyt solidny program: </font>
-        </font>
-    </p>
-
-
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font color="#000000">&bdquo;<font size="4" style="font-size: 14pt">Nieszyfrowane
-                    nazwy zmiennych, nie szyfrowany kod, otwarte nazwy serwerów,
-                    ślady w logach&hellip;&rdquo;</font>
-            </font>
-        </font>
-    </p>
-
-
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">
-            <font color="#5983b0">W</font>
-            <font color="#5983b0">ylicza</font>
-            <font color="#5983b0">ne
-                są rzekome słabości oprogramowania, </font>
-            <font color="#5983b0">ale
-                te słabości, jeśli by były naprawione, to też
-                wcale nie świadczyły by zastosowaniu uznanych standardów
-                bezpieczeństwa.</font>
-            <font color="#5983b0"> </font>
-            <font color="#5983b0">Dwie
-                początkowe cechy, to </font>
-            <font color="#5983b0">kategoria </font>
-            <font color="#5983b0">tzw
-                &bdquo;security by obscurity&rdquo;. Są to działania, które
-            </font>
-            <font color="#5983b0">służą przede wszystkim
-                zmyleniu osób próbujących rozpracować program
-                i nie dają formalnej gwarancji zabezpieczenia. Zakładam, że
-                konkretnie chodzi tu o </font>
-            <font color="#5983b0">tzw obfu</font>
-            <font color="#5983b0">skację
-                (zaciemnienie) kodu programu (w kwestię szyfrowania kodu
-                programu w rozumieniu kryptograficznym z zastosowania algorytmu z
-                kluczem symetrycznym, czyli hasłem, nie będę wchodzić,
-                ponieważ to też nie jest gwarancja bezpieczeństwa,
-                choć złośliwe programy czasami tak robią, ale to
-                hasło musi być koniec końców fizycznie obecne w
-                nich samych i znów problemem jest tylko to, jak długo
-                badacz będzie musiał go szukać). Wracając do
-                klasycznej obfuskacji -- faktycznie jest ona spotykana w językach
-                programowania używanych dla telefonów komórkowych
-                (Java). Czyli powiedzmy, że nazwy zmiennych i kod są jakoś
-                &bdquo;zaszyfrowane&rdquo; w tym kontekście. Te metody nie
-                stanowią jednak realnego zabezpieczenia kodu programu. Polegają
-                one po prostu na skom</font>
-            <font color="#5983b0"><span style="font-style: normal">pl</span></font>
-            <font color="#5983b0"><span style="font-style: normal">ikowaniu
-                    instrukcji wykonywanych przez komputer w ramach programu tak, aby
-                    skutek i</span></font>
-            <font color="#5983b0"><span style="font-style: normal">ch</span></font>
-            <font color="#5983b0"><span style="font-style: normal">
-                    wykonania był taki sam, ale zrozumienie ich sensu przez
-                </span></font>
-            <font color="#5983b0"><span style="font-style: normal">obserwującego
-                </span></font>
-            <font color="#5983b0"><span style="font-style: normal">człowieka
-                    było utrudnione. </span></font>
-            <font color="#5983b0"><span style="font-style: normal">Na
-                    przykład poprzez zamianę nazw zmiennych na bezsensowne
-                    ciągi znaków (świetne zabezpieczenie &#128521;).
-                    Albo poprzez wielokrotne &bdquo;skakanie&rdquo; po różnych
-                    instrukcjach programu tak, aby na koniec i tak wrócić do
-                    właściwego miejsca (jeszcze lepsze zabezpieczenie &#128521;).
-                </span></font>
-            <font color="#5983b0"><span style="font-style: normal">
-                </span></font>
-        </font>
-    </p>
-
-    <p style="font-style: normal; margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Doświadczony
-                badacz inżynierii wstecznej będzie w stanie prześledzić
-                krok po kroku działanie dowolnego programu wykonującego się
-                na komputerze. Jedynym problemem tutaj jest pracochłonność
-                tego procesu, ale z całą pewnością jest to
-                praktycznie zawsze wykonalne (w końcu jeśli jakiś
-                program wykonuje się na komputerze, to możemy tak długo
-                obserwować skutki działania poszczególnych jego
-                fragmentów, że w końcu odtworzymy logikę tego,
-                co on robi). </font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">
-            <font color="#5983b0"><span style="font-style: normal">Dalej,
-                    gdyby nazwy serwerów były &bdquo;</span></font>
-            <font color="#000000"><span style="font-style: normal">zamknięte</span></font>
-            <font color="#5983b0"><span style="font-style: normal">&rdquo;,
-                    chociaż nie do końca rozumiem co to znaczy, ale wykonując
-                    dowolny program na komputerze, zawsze będziemy w stanie
-                    zaobserwować z jakimi adresami sieciowymi próbuje on się
-                    skomunikować. Tego się nie da ukryć. To trochę
-                    tak, jakby pomalować czarną farbą rozkład jazdy
-                    autobusów </span></font>
-            <font color="#5983b0"><span style="font-style: normal">na
-                    przystanku </span></font>
-            <font color="#5983b0"><span style="font-style: normal">i
-                    twierdzić, że od tej pory nikt nie będzie w stanie
-                    poznać tras, jakimi one jeżdżą. Ale można
-                    przecież zawsze pojechać za autobusem i poznać jego
-                    trasę &#128521;. Natomiast jeśli chodzi o &bdquo;</span></font>
-            <font color="#000000"><span style="font-style: normal">ślady
-                    w logach&rdquo;. </span></font>
-            <font color="#5983b0"><span style="font-style: normal">Faktycznie,
-                </span></font>
-            <font color="#5983b0"><span style="font-style: normal">jeśli
-                    działający na telefonie ofiary Pegasus coś logował,
-                    to nie brzmi to rozsądnie w przypadku programu, który z
-                    definicji miał być przynajmniej w pewnym stopniu trudny do
-                    wykrycia. </span></font>
-        </font>
-    </p>
-
-
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Ponadto
-                błędy, których używa się do wyprodukowania
-                programu typu Pegasus mogą zostać w każdej chwili
-                wyeliminowane przez autorów oryginalnego oprogramowania,
-                którzy mogą nagle po prostu zorientować się, że
-                popełnili kardynalny błąd. Dlatego taki programista
-                piszący Pegasusa ma bardzo trudne zadanie i to z całą
-                pewnością nie są nastoletni amatorzy hackowania.
-                Natomiast zupełnie oddzielną kwestią, i ciekawą
-                samą w sobie, jest to, kto takich autorów opłaca i
-                jakie ma w tym cele biznesowe.</font>
-        </font>
-    </p>
-
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">W
-                tym miejscu, uwzględniając powyższe rozumowanie wraz z
-                bardzo precyzyjnymi informacjami od mediów należy
-                wspomnieć o możliwości wyprowadzenia wniosków
-                kluczowych dla oceny całej afery. Taką precyzyjną
-                informacją jest fakt ujawnienia przez Panią Prokurator
-                komunikatu, jaki otrzymała ona od firmy Apple. Komunikat ten
-                ostrzega, że jej urządzenie najprawdopodobniej było
-                celem ataku sponsorowanego przez państwo. Ta informacja jest
-                praktycznie niemożliwa do podważenia. Firma Apple nie jest
-                zadowolona z tego, że inna firma (producent Pegasusa)
-                wykorzystuje fatalne w skutkach błędy w jej oprogramowaniu,
-                które umożliwiają produkcję takich narzędzi
-                do inwigilacji. To jest szkodliwe dla ich wiarygodności,
-                wizerunku i w konsekwencji ich biznesu. Dlatego w listopadzie 2021
-                roku firma Apple weszła w spór sądowy z NSO Group,
-                producentem Pegasusa. </font>
-        </font>
-    </p>
-
-
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Tak
-                na marginesie, ciekawe jest to, jakim cudem ten biznes kręcił
-                się wcześniej. Przecież ten konflikt interesów
-                był oczywisty i nietrudno było przypuszczać, że
-                coś się tutaj rozsypie. Ktoś naprawi któryś
-                z błędów, ktoś komuś powie o którymś
-                błędzie, ktoś z kadry zarządzającej
-                stwierdzi, że tego nie można dalej tolerować itd. i
-                całość przestanie działać. Dlatego nie można
-                wykluczyć sugestii o wielopoziomowej grze operacyjnej służb
-                specjalnych silniejszego państwa, wycelowanej w inne państwa,
-                które miały być klientami Pegasusa.</font>
-        </font>
-    </p>
-
-
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Firma
-                Apple jest w stanie skutecznie utrudnić życie swojemu
-                przeciwnikowi, ponieważ praktycznie każde poważne
-                oprogramowanie posługuje się tzw. telemetrią, czyli
-                zbieraniem statystycznych, technicznych informacji o tym, w jaki
-                sposób oprogramowanie działa na urządzaniach
-                faktycznych użytkowników i wysyłaniem ich do
-                producenta. Sama telemetria to wbrew pozorom nic złego i wcale
-                nie musi być naruszeniem prywatności. Np. jeśli w
-                jakimś oprogramowaniu dodano nową funkcję uruchamianą
-                nowym przyciskiem, to producent chętnie chciałby się
-                dowiedzieć jak często i w jakich okolicznościach
-                użytkownicy klikają w przycisk. Jeśli klikają
-                rzadziej niż producent się spodziewa, to może przycisk
-                ma nieodpowiedni kolor, wielkość, umiejscowienie itp. Może
-                trzeba coś zmienić. Może dział odpowiedzialny za
-                PR niezbyt skutecznie zakomunikował wprowadzenie nowej funkcji.
-                W ten sposób za pomocą telemetrii ukierunkowuje się
-                rozwój oprogramowania. Telemetria to również
-                mnóstwo danych technicznych. Te dane pozwalają firmie
-                Apple wnioskować, co dzieje się na urządzeniu. Gdy
-                szczegóły techniczne dot. Pegasusa stały się
-                bardziej jawne, zapewne w związku ze sporem sądowym, firma
-                Apple zapewne zdobyła informacje (alba sama zorientowała
-                się gdzie popełniła błędy, to również
-                możliwe, również przypadkowo) o tym, jakie
-                konkretnie błędy są w nim wykorzystywane. Następnie
-                wpadli na genialny pomysł, by dodatkowo utrudnić życie
-                swojemu przeciwnikowi: przeszukali swoje dane pochodzące z
-                telemetrii i wyciągnęli na ich podstawie wniosek, na
-                których konkretnie urządzeniach został wykorzystany
-                błąd, o którym wiedzieli, że znany był
-                producentowi Pegasusa. Wiadomo też było, że producent
-                sprzedaje Pegasusa jedynie państwom, a nie klientom
-                indywidualnym, bo ceny licencji są zaporowe. Kolejnym krokiem
-                było poinformowanie użytkowników tych urządzeń,
-                co im zrobiono. To potężny strzał w producenta
-                Pegasusa i jego klientów (czyli służby państwowe).
-                Ich biznes jest fundamentalnie zachwiany: nie dość, że
-                błędy w oprogramowaniu Apple, na którym bazowali
-                zostały ujawnione i naprawione (fundamenty na których
-                działał Pegasus mogły zostać w istotnym stopniu
-                zburzone), to dodatkowo ich klienci (służby państwowe),
-                którym zapewne ekstremalnie zależy na dyskrecji zostali
-                zdemaskowani i tym samym skompromitowani. Właśnie w tym
-                miejscu dopiero znajduje się &bdquo;punkt wejścia&rdquo; do
-                całej polskiej afery. <b>W mojej ocenie z prawdopodobieństwem
-                    graniczącym z pewnością, możemy uznać, że
-                    nasz rząd posiadał i używał Pegasusa wycelowanego
-                    przynajmniej w te osoby, które otrzymały komunikat bądź
-                    w te osoby, których telefony zbadało kanadyjskie
-                    laboratorium. Jest to praktycznie pewne, że tak po prostu było</b>.
-                W tym przypadku akurat nie sprawdziło się powiedzenie,
-                &bdquo;<i>gdzie</i><i> dwóch się bije, to trzeci
-                    korzysta&rdquo;. </i><span style="font-style: normal">Mi osobiście
-                    kojarzy się raczej inne: &bdquo;</span><i>kiedy Padyszachowi
-                    wiozą zboże, kapitan nie troszczy się, jakie wygody
-                    mają myszy na statku&rdquo;</i><span style="font-style: normal">.
-                    Chyba ostatnim z możliwych zmartwień firmy Apple było
-                    to, jak klienci Pegasusa wytłumaczą się przed swoimi
-                    wyborcami. Firma Apple oddała po prostu celny strzał w
-                    biznes swojego przeciwnika żeby chronić swoje interes</span><span
-                    style="font-style: normal">y</span><span style="font-style: normal">.
-                </span></font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Informacje
-                o posiadaniu Pegasusa pojawiały się w przestrzeni medialnej
-                już kilka lat temu, ale nie były w żaden sposób
-                potwierdzone ani weryfikowalne. Żaden z klientów
-                producenta Pegasusa zapewne nie spodziewał się (chociaż
-                gdy teraz o tym myślę, to aż się trochę
-                dziwię), że taki fundamentalny konflikt biznesowy (chociaż
-                dość oczywisty) między dwiema firmami produkującymi
-                oprogramowanie (będącymi w dość dziwacznej
-                relacji &ndash; jedna żeruje na błędach popełnionych
-                przez drugą) finalnie doprowadzi do zdemaskowania użytkowników
-                narzędzia. Zdemaskowanie to jest w mojej ocenie bardzo
-                wiarygodne, ponieważ firma Apple jest w posiadaniu całej
-                wiedzy dot. wszystkich elementów zaangażowanych w
-                działanie Pegasusa. Czyli dokładniej: które błędy
-                zostały użyte na których urządzeniach oraz jak
-                objawia się użycie tych błędów poprzez
-                Pegasus. </font>
-        </font>
-    </p>
-
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">I
-            teraz najciekawsze!!! Nie atakuje się pojedynczego komputera!!!
-            Atakuje się wszystko jak leci, z jakiegoś kraju, miasta,
-            domeny, sieci, ale tylko w celu sprawdzenia, gdzie są te dziury!
-        </font>
-    </p>
-
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">W
-                powyższym zdaniu zostały wymieszane bardzo różne
-                aspekty technologiczne, które mogą, ale zazwyczaj nie są
-                ze sobą powiązane. </font>
-        </font>
-    </p>
-
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Po
-                pierwsze, oprogramowanie typu Pegasus jest bardzo precyzyjnie
-                wycelowane w konkretne ofiary, ponieważ licencje są
-                ekstremalnie drogie. Tak drogie, żeby tylko służby
-                państwowe były w stanie je opłacić.</font>
-        </font>
-    </p>
-
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Po
-                drugie, faktycznie istnieją gałęzie złośliwego
-                oprogramowania, w których atakuje się &bdquo;wszystko jak
-                leci&rdquo;. Ale to zupełnie inne gałęzie niż
-                Pegasus. Taką gałęzią mogą być np. tzw.
-                botnet&rsquo;y czyli ataki, których celem jest przejęcie
-                kontroli nad jak największą liczbą komputerów
-                zwykłych, nieświadomych niczego użytkowników.
-                Posiadanie kontroli nad ogromną liczbą komputerów
-                może być przydatne do przeprowadzenia zmasowanego ataku na
-                jakąś usługę w internecie i tym samym wyrządzenia
-                biznesowi tej usługi szkód finansowych poprzez jej
-                &bdquo;zapchanie&rdquo; (<i>distributed denial of service)</i><span style="font-style: normal">.</span>
-            </font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt"><span style="font-style: normal">P</span><span
-                    style="font-style: normal">owiązanie
-                    sformułowania &bdquo;atakuje się wszystko jak leci&rdquo;
-                    ze skanowaniem sieci jest trochę zbyt daleko idącym
-                    uproszczeniem. </span><span style="font-style: normal">Skanowanie
-                    sieci to forma rekonesansu, wstępnego rozeznania po uzyskaniu
-                    dostępu do czyjejś sieci. To nie jest jeszcze atak. </span><span style="font-style: normal">Ponadto
-                    powiązanie tego sformułowania z Pegasusem jest raczej
-                    nieadekwatne, ponieważ Pegasus działał o oparciu
-                    znalezione błędy w oprogramowaniu, którego
-                    przeważnie używają ludzie, których klienci
-                    Pegasusa chcieliby podsłuchiwać. </span><span style="font-style: normal">Konkretnie
-                    mam tutaj na myśli użytkowników telefonów
-                    komórkowych. Ich się raczej nie skanuje. Nie jestem
-                    pewien, ale wydaje mi się, że telefony komórkowe
-                    mogą nawet nie mieć publicznego adresu IP, więc nawet
-                    nie bardzo sobie wyobrażam jak przeprowadzić takie
-                    hipotetyczne skanowanie, ale tutaj musiałby się
-                    wypowi</span><span style="font-style: normal">e</span><span style="font-style: normal">dzieć
-                    ktoś bardziej kompetentny w obszarze telekomunikacji. Bo możliwe
-                    że z wykorzystaniem sieci 5G i adresów IP w wersji 6
-                    można teoretycznie przeprowadzić skanow</span><span style="font-style: normal">a</span><span
-                    style="font-style: normal">nie
-                </span><span style="font-style: normal">portów na telefonach.</span></font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt"><span style="font-style: normal">H</span><span
-                    style="font-style: normal">ipotetyczną
-                    ścieżkę do zainfekowania się Pegasusem wyobrażam
-                    sobie tak: producent Pegasusa wszedł w posiadanie wiedzy o
-                    błędzie w oprogramowaniu do czytania poczty e-mail na
-                    telefonie komór</span><span style="font-style: normal">k</span><span
-                    style="font-style: normal">owym.
-                    Zapłacił za to 7 cyfrową kwotę w dolarach,
-                    ponieważ błąd nie jest jeszcze nigdzie opisany i
-                    pozwala na wykonanie dowolnych czynności na urządzeniu
-                    ofiary po wysłaniu do niej jedynie email&rsquo;a. Z punktu
-                    widzenia ofiary, podczas czytania emaila nie dzieje się nic
-                    podejrzanego. W rzeczywistości w tle pobierany jest plik
-                    zawierający program Pegasusa i (prawdopodobnie wykorzystując
-                    jeszcze inne błędy) ten program jest instalowany na
-                    urządzeniu ofiary w sposób niewidoczny. Program ten
-                    nawiązuje łączność z &bdquo;operatorem&rdquo;
-                    po drugiej stronie Pegasusa i rozpoczyna się cały proceder.</span></font>
-        </font>
-    </p>
-
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">Za
-            moich czasów mówiło się na to &quot;czesanie&quot;
-            sieci bądź skanowanie. Następnie sprawdza się, co
-            się &quot;złapało&quot;, czyli komputery o jakich
-            adresach są podatne na atak. I dopiero teraz zaczyna się
-            atak właściwy! </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt"><span style="font-style: normal">Skanowanie
-                    sieci przeprowadza </span><span style="font-style: normal">się w
-                </span><span style="font-style: normal">okolicznościach, </span><span style="font-style: normal">gdy
-                    spodziew</span><span style="font-style: normal">a</span><span style="font-style: normal">my
-                    się znaleźć w czyjejś sieci jakieś
-                    działające usługi sieciowe. Na telefonach komórkowych
-                    nie spodziewamy się by działały jakieś usługi.
-                    Przez usługę rozumiemy np. serwer stron internetowych bądź
-                    serwer tzw. API działające</span><span style="font-style: normal">go</span><span
-                    style="font-style: normal">
-                    z wykorzystaniem protokołu HTTP na tzw. porcie IP o numerze 80
-                    (upraszczając) </span><span style="font-style: normal">do
-                    którego można wysyłać polecenia i odbierać
-                    dane</span><span style="font-style: normal">. </span><span style="font-style: normal">Poprzez
-                    działanie usługi rozumiemy, iż port IP o właściwym
-                    dla niej numerze jest otwarty. Skanowanie sieci polega na
-                    wyszukiwaniu takich otwartych portów w celu rozeznania jakie
-                    usługi i w jakich wersjach są uruchomione na komputerach
-                    podłączonych do sieci. Na podstawie tej wiedzy można
-                    podjąć działania atakujące wykorzystując
-                    błędy dotyczące tych konkretnych usług w tych
-                    konkretnych znalezionych w tej sieci wersjach. Jeśli na
-                    urządzeniu (komputerze, bądź telefonie, który
-                    de facto jest komputerem) nie są uruchomione żadne usługi,
-                    to żadne porty IP nie powinny być na nim otwarte. Na
-                    poprawnie działającym telefonie nie powinny być
-                    uruchomione żadne usługi, które byłyby widoczne
-                    z punktu widzenia obserwatorów podłączonych do tej
-                    samej sieci, co ten telefon. </span><span style="font-style: normal">Dlatego
-                    koncept skanowania sieci nie bardzo pasuje mi do oprogramowania
-                    wycelowanego w telefony komórkowe. </span></font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt"><span style="font-style: normal">Należy
-                    doprecyzować też, co rozumiemy pod używanym w toku
-                    tego wyjaśnienia pojęcia &bdquo;sieci&rdquo;. Generalnie
-                    skanuje się komputery w jakiejś sieci prywatnej np.
-                    firmowej, do której uzyskało się dostęp.
-                    Chociaż technicznie teoretycznie nic nie stoi na przeszkodzie,
-                    aby skanować komputery w obrębie całego internetu, to
-                    jednak istnieje szereg praktycznych przeciwwskazań żeby to
-                    robić. Przede wszystkim jest to złamanie regulaminu chyba
-                    każdego dostawcy internetu, </span><span style="font-style: normal">co
-                    może być przyczyną wypowiedzenia umowy. </span><span style="font-style: normal">Ponadto
-                    urządzenia </span><span style="font-style: normal">działające
-                    w </span><span style="font-style: normal">sieci</span><span
-                    style="font-style: normal">ach</span><span style="font-style: normal">
-                    prywatn</span><span style="font-style: normal">ych</span><span style="font-style: normal">
-                    (również w naszych domach) są chronione przed takimi
-                    skanowaniami przez szereg skutecznych mechanizmów </span><span
-                    style="font-style: normal">izolujących</span><span style="font-style: normal">
-                    (NAT i firewall) które działają </span><span style="font-style: normal">w
-                    modemach internetowych. We wczesnych latach 200x, gdy modemy były
-                    urządzeniami znacznie prostszymi i nie posiadały jeszcze
-                    takich mechaniz</span><span style="font-style: normal">m</span><span style="font-style: normal">ów
-                    izolacji, to na komputerze bezpośrednio podłączonym do
-                    takiego modemu </span><span style="font-style: normal">(czyli
-                    światowego internetu) </span><span style="font-style: normal">można
-                    było zaobserwować bardzo częste skanowania portów
-                </span><span style="font-style: normal">(teraz w sumie też można
-                    by było, ale nikogo to nie interesuje, bo modem to z definicji
-                    blokuje)</span><span style="font-style: normal">. To, że jest to
-                    niezgodne z regulaminem, to nie znaczy </span><span style="font-style: normal">jeszcze</span><span
-                    style="font-style: normal">,
-                    że nikt nie próbuje. </span><span style="font-style: normal">Oczywiście
-                    można skanować całe zakresy adresów IP
-                    należących do internetu. Można w ten sposób
-                    wyszukiwać udostępnione w internecie różne
-                    usługi sieciowe i można próbować je atakować
-                    (teoretycznie, po praktycznie, to skanowanie jest naruszeniem
-                    regulaminu a atakowanie chyba nawet przestępstwem).</span><span style="font-style: normal">
-                    Tutaj znów sam się zastanawiam jak to jest w przypadku
-                    telefonów komór</span><span style="font-style: normal">k</span><span
-                    style="font-style: normal">owych,
-                    ale wydaje mi się, że infrastruktura operatora telefonii
-                    jest tak zaprojektowana, żeby zapewnić jakieś
-                    mechanizmy izolujące telefon komórkowy od obserwatorów
-                    podłączonych do internetu. Dlatego sama koncepcja
-                    skanowania w odniesieniu do Pegasusa, który z definicji jest
-                    projektowany dla telefonów komórkowych wydaje mi się
-                    nieadekwatna.</span></font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">Wybrane
-            (z tych podatnych na atak) ciekawe komputery banków, dużych
-            firm, rządowe są atakowane oprogramowaniem, które
-            może wewnątrz uruchomić nasz kod wykradający,
-            podmieniający lub szyfrujacy dane. </font>
-    </p>
-
-    <p style="font-style: normal; margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Raczej
-                tak, aczkolwiek te &bdquo;ciekawe&rdquo; komputery powinny być
-                odizolowane od internetu. Ale posiadanie usługi dostępnej
-                przez internet jest wygodne np. dostęp do poczty firmowej dla
-                pracowników firmy. Dlatego taka usługa musi być
-                &bdquo;wystawiona&rdquo; na świat z gigantyczną
-                ostrożnością. A usługi, które nie muszą
-                być &bdquo;wystawiane&rdquo; na świat, powinny być
-                ograniczone tylko do wewnętrznej sieci firmowej. Komputery z
-                tych sieci firmowych nie są dostępne dla skanowań
-                portów z internetu. Więc to nie jest też tak, że
-                wszystkie, dowolne komputery można zawsze próbować
-                skanować. </font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">Czyli
-            tak naprawdę nasze komputery są bezustannie atakowane,
-            oblegane przez setki dziwnych programików, które
-            kombinują, testują, jak się dostać do środka.</font>
-    </p>
-
-    <p style="font-style: normal; margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Nasze
-                domowe komputery też są odizolowane od internetu, jak sieci
-                firmowe. W sensie mogą one nawiązywać połączenia
-                z innymi komputerami, ale inne komputery nie mogą nawiązać
-                bezpośredniej łączności z naszym komputerem. Tę
-                izolację zapewniają nasze modemy dostępowe do
-                internetu i działające na nich mechanizmy NAT i firewall.
-                Pomijam tutaj kwestię celowego uruchomienia jakiejś usługi
-                na domowym komputerze i wystawienia jej na świat poprzez
-                specjalną regułę wyjątku w mechanizmie NAT. Tak
-                też czasami się robi.</font>
-        </font>
-    </p>
-    <p style="font-style: normal; margin-bottom: 0cm"><br />
-
-    </p>
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">
-            <font color="#5983b0"><span style="font-style: normal">Oczywiście
-                    współczesne ataki cyber przestępców
-                    projektowane są z uwzględnieniem tego, że NAT i
-                    firewall są praktycznie wszędzie. Dlatego obecnie uważa
-                    się, że najskuteczniejszą formą ataku jest atak
-                    socjotechniczny czyli tzw. phishing. Jest on w swojej istocie
-                    zaskakująco prosty koncepcyjnie:
-                    <b>wyślijmy
-                        do ofiary wiarygodnie wyglądającą wiadomość i jakoś
-                        ją przekonajmy żeby sama sobie zainstalowała złośliwy program</b>.
-                    To zdumiewające, że współczesne ataki to
-                    praktycznie w większości właśnie coś
-                    takiego. Dużo łatwiej jest wycelować socjotechnikę
-                    w dużą liczbę ludzi (statystycznie zawsze ktoś
-                    się da nabrać i korzyści będą) niż
-                    wyszukiwać, bądź kupować od kogoś jakieś
-                    błędy w oprogramowaniu, do których potem trzeba
-                    napisać od zera złośliwe oprogramowanie je
-                    wykorzystujące.
-                    Tak więc te całe skanowania, to jest jest jak najbardziej
-                    działająca technika wyszukiwania miejsc w których
-                    możemy dalej szukać podatności (otwarty
-                    port IP czyli, uruchomiona usługa to jeszcze nie jest podatność,
-                    usługa może być technicznie bardzo dobrze
-                    zabezpieczona przed nieuprawnionym użyciem), ale po pierwsze nie
-                    jest to nawet jeszcze żadna forma ataku, a po drugie nie jest
-                    ona kluczowa z punktu widzenia profesjonalnych cyber przestępców,
-                    po trzecie producent Pegasusa nie jest klasycznym cyber przestępcą
-                    i działa w oparciu o zupełnie inne techniki (wyszukiwanie
-                    błędów) tak, aby jego produkt był dokładnie
-                    skrojony na potrzeby jego klientów.</span></font>
-        </font>
-
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">Pegasus
-            najprawdopodobniej robił to samo, &bdquo;czesał&quot; sieć,
-            już jako oprogramowanie wyprodukowane przez prywatną firmę.
-            Dopiero po uzyskaniu zlecenia od osoby, która posiadała
-            abonament dokonywał właściwego ataku. </font>
-    </p>
-
-    <p style="font-style: normal; font-weight: normal; margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Tutaj
-                trudno spekulować, czy Pegasus stosował jakieś aktywne
-                formy poszukiwania urządzeń podatnych na to, żeby dało
-                się go na nich zainstalować. Ale jak opisałem
-                wcześniej, taka metoda działania nie bardzo tutaj pasuje do
-                jego modelu biznesowego. Ale dopuszczam taką możliwość.</font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">Jeśli
-            sprawdzicie logi w jakimś mało istotnym urzędzie, to
-            może się okazać, że też są tam setki
-            śladów, po atakach Pegasusa, oraz kolejne setki śladów
-            po atakach dziesiątek innych wirusów.</font>
-    </p>
-
-
-    <p style="font-style: normal; font-weight: normal; margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Nie
-                sądzę, ale ciekawe byłoby usłyszeć, co ma do
-                powiedzenia administrator w urzędzie. Taki administrator pewnie
-                nawet nie zwraca uwagi na logi skanowań portów z
-                internetu w kierunku jego sieci. Bo one są blokowane przez
-                praktycznie każdy router. Co innego, gdyby taki administrator
-                odkrył, że coś skanuje porty w wewnętrznej sieci
-                urzędu. To by oznaczało, że w sieci już jest
-                intruz. Mógł się do niej dostać na mnóstwo
-                sposobów np. przekonać jakiegoś urzędnika żeby
-                na urzędniczym komputerze wykonał jakieś czynności
-                i przy okazji uruchomił złośliwy program. Tak to
-                zazwyczaj wygląda. </font>
-        </font>
-    </p>
-
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">Tak
-            więc ta przerażająca liczba 6000 ataków przez 2
-            lata na NIK z punktu widzenia laika jest wstrząsająca, ale
-            z informatycznego punktu widzenia, jest całkiem zwyczajna. </font>
-    </p>
-
-
-    <p style="font-style: normal; font-weight: normal; margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Ta
-                liczba podana kilka dni temu faktycznie jest dziwna, nie wiem jak oni
-                to liczyli. Przemknęły mi gdzieś jakieś nagłówki,
-                że liczono połączenia sieciowe, a to już jest
-                spore nadużycie. Mogę sobie wyobrazić zupełnie
-                hipotetyczną sytuację, że Pegasus ze względu na
-                swój brak stabilności w działaniu często zrywa
-                połączenia sieciowe i musi je ponawiać powiedzmy co
-                pół minuty. W logach zobaczymy wtedy tysiące
-                połączeń &#129315;. Nie wiem czy tak było, ale
-                zachowałbym powściągliwość w ekscytowaniu
-                się. W tym całym technicznym obszarze jest mnóstwo
-                miejsc, gdzie można dokonać takiego chwytliwego
-                informacyjnego nadużycia. Jedyne czego można być
-                pewnym to to, że Pegasus był użyty u tych konkretnych
-                ludzi. To jest praktycznie pewne. Oczywiście etyczna ocena tego
-                w kontekście politycznych mocodawców operatorów
-                polskiego Pegasusa z miedzianym czołem twierdzących, że
-                wszystko było zgodne z prawem i nic złego się nie
-                wydarzyło wykracza poza ramy tego opracowania. </font>
-        </font>
-    </p>
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">Ciekaw
-            byłbym wywiadu z jakim profesjonalnym administratorem dużej
-            sieci, który opowiedziałby, ile ataków dziennie
-            przeżywa np. komputer w dużym szpitalu albo dużej
-            notowanej na giełdzie firmie.</font>
-    </p>
-
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">
-            <font color="#5983b0"><span style="font-style: normal"><span style="font-weight: normal">Mnie
-                        by właśnie interesowało, jakie działania on
-                        klasyfikuje jako próbę ataku.</span></span></font>
-        </font>
-    </p>
-
-
-    <p style="margin-bottom: 0cm">
-        <font size="4" style="font-size: 14pt">Oczywiście
-            od czasów, kiedy się o te sprawy otarłem minęli,
-            już wiele lat, ale zasady działania komputerów i
-            czarnego rynku oprogramowania wirusowego się chyba się
-            bardzo nie zmieniły ;)</font>
-    </p>
-
-    <p style="font-style: normal; font-weight: normal; margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">Zmieniły
-                się fundamentalnie. Zmieniły się niesamowicie. Sam
-                jestem w szoku, gdy na to patrzę, a siedzę w technologiach
-                informatycznych nie na tyle długo, żebym mówił
-                o sobie, że jestem jakimś dinozaurem (chociaż całkiem
-                możliwe że są już tacy, dla których
-                jestem). Pamiętam początek lat 90. Pamiętam program
-                MKS_VIR i jego funkcjonalność atlasu demonstracyjnego
-                wirusów. Kiedyś wirusy były zabawkami pisanymi przez
-                nudzących się programistów dla zabawy. Na przykład
-                wirus, którego efektem były znienacka spadające
-                literki z istniejących linii tekstu na ekranie komputera. W
-                drugiej połowie lat 90 zaczęło się robić
-                poważniej, np. wirus CIH zwany też &bdquo;Czarnobylem&rdquo;
-                potrafił trwale zamazać kość pamięci
-                oprogramowania układowego na komputerze i de facto go zniszczyć.
-                Koniec lat 90 to również pojawienie się nowych
-                wynalazków, już nie tyle wirusów, co tzw.
-                trojanów, back-door&rsquo;ów. Programów do
-                przejmowania kontroli nad komputerami, poprzez coś w rodzaju
-                &bdquo;tylnych drzwi&rdquo; ukrytych przed użytkownikiem. Słynny
-                NetBus, czy rodzimy Prosiak, który zapewne doprowadził do
-                stanu przedzawałowego niejednego nauczyciela informatyki w
-                polskim gimnazjum, gdy musiał on diagnozować
-                niewytłumaczalne, magiczne, nadprzyrodzone, samoczynne
-                otwieranie się napędów CD-ROM podczas lekcji, ale
-                tylko na lekcjach u określonych klas &#128513;. Ale wówczas
-                to nadal była technologiczna nisza, takie trochę zabawki.
-                Początek lat 2000 to już poważniejsze sprawy.
-                Zaczynamy mówić o &bdquo;robakach&rdquo;, automatycznie
-                kopiujących się przez internet. Słynny &bdquo;I love
-                you&rdquo; napisany w dialekcie języka Basic, uważanego
-                przez niektórych profesjonalistów jako mający
-                tylko niewielkie możliwości. Zaczyna mówić się
-                o keylogger&rsquo;ach, czyli wirusach, które technicznie nie
-                szkodzą, tylko zbierają wszystkie wpisywane na klawiaturze
-                dane. I je wykradają. W celach zarobkowych. Zaczyna się
-                tworzyć na tym biznes. W drugiej połowie dekady jest
-                jeszcze poważniej, wyodrębnia się coraz to nowe,
-                niezwykle egzotyczne pod względem technicznym gałęzie
-                złośliwego oprogramowania jak np. rootkit&rsquo;y. Chociaż
-                nie wyewoluowały one w formę istotną obecnie, ale
-                warto przytoczyć choćby sylwetkę niezwykle
-                utalentowanej polskiej badaczki Joanny Rutkowskiej, która w
-                2006 rozpoczęła w branży dyskusję o możliwości
-                napisania wirusa komputerowego, który byłby w 100%
-                niewykrywalny z wykorzystaniem środków technicznych które
-                ówcześnie były nowościami w branży (tzw.
-                wirtualizacja sprzętowa). W sumie to nie tylko rozpoczęła
-                ona dyskusję, ale pokazała również działający
-                prototyp (Blue Pill), przed którym cała ówczesna
-                technologia antywirusowa rozłożyła bezradnie ręce.
-                Niektóre wnioski z tamtych czasów przerodziły się
-                w faktycznie działające współcześnie w
-                naszych komputerach z systemem Windows rozwiązania programowe,
-                które wykorzystują właśnie sprzętową
-                wirtualizację w celu ochrony przed wirusami (zaawansowane opcje
-                programu Microsoft Defender używające technologii HyperV).
-                Dalej, lata 201x to już jest eksplozja &ndash; botnety,
-                ransomware &ndash; czyli zarabianie na wyłudzaniu okupów
-                za zaszyfrowane dane, ataki na skalę przemysłową,
-                przeprowadzane przez służby państwowe, które
-                wprawiają w zdumienie nawet profesjonalistów z branży
-                &ndash; atak Stuxnet zaprojektowany przez USA i Izrael i wycelowany w
-                przemysłowe ośrodki badań jądrowych w Iranie,
-                przez wiele lat nierozpracowany technicznie. Wszechobecny phishing,
-                zalecanie sprzętowych kluczy przy uwierzytelnianiu
-                dwu-składnikowym. Eksperci twierdzą, że absolutnie
-                każdy człowiek może zostać oszukany i nakłoniony
-                do zainstalowania sobie złośliwego oprogramowania. A
-                końcówka dekady to już kompletny &bdquo;hardkor&rdquo;
-                techniczny, pojawienie się informacji o atakach Meltdown i
-                Spectre, które wykorzystują błąd w&hellip;
-                procesorze. Tak, to też możliwe. We wszystkich procesorach
-                Intel&rsquo;a sprzed ok 2018 roku znajdują się błędy
-                projektowe możliwe do wykorzystania w złośliwym
-                oprogramowaniu (dla uspokojenia odbiorców warto jednak dodać,
-                że producenci systemów operacyjnych nie byli na szczęście
-                bezbronni &ndash; możliwe było zmitygowanie zagrożenia
-                w znaczącym stopniu kosztem wykonywania pewnych operacji
-                dłuższą, okrężną drogą, ale ponoć
-                nie można mówić o wyeliminowaniu zagrożenia w
-                100%). Ktoś mógłby powiedzieć, że to nic
-                nowego, bo już w 1994 roku zdarzyło się firmie Intel
-                wyprodukować pokaźną ilość procesorów
-                z błędem podczas dzielenia liczb (Pentium FDIV bug), ale to
-                drobnostka w porównaniu do współczesnych odkryć,
-                bo wówczas problemem chyba były tylko zawieszające
-                się gry.</font>
-        </font>
-    </p>
-
-    <p style="font-style: normal; font-weight: normal; margin-bottom: 0cm">
-        <font color="#5983b0">
-            <font size="4" style="font-size: 14pt">To
-                wszystko stanowi niesamowitą i fascynująca historię, a
-                wymienione przeze mnie przykłady, to tylko straszliwie wybiórcze
-                fragmenty &ndash; wyliczam je z głowy&hellip;</font>
-        </font>
-    </p>
+<body lang="pl-PL">
+    <article>
+
+        <p class="A">Bo ja trochę techniczny jestem, więc wrzucę parę uwag z moich bardzo dawnych i skromnych doświadczeń w tych sprawach. Wirusy komputerowe działają w odwrotnej kolejności, niż wszyscy sądzą.</p>
+
+        <p class="B">Obecnie nie mówi się już o <q>wirusach</q>, ale o szerszej kategorii: po prostu <q>złośliwego oprogramowania</q>; <em>malware, malicious software</em>. Wirusy kojarzą mi się z węższą kategorią, typową przed rokiem 2000 (ewentualnie we wczesnych latach 200x), której główną cechą jest zdolność do zautomatyzowanego kopiowania się na inne komputery. Ten rodzaj oprogramowania obecnie jest bardzo rzadki, natomiast jest mnóstwo innych nowych kategorii jak np. <em>ransomware</em>, czyli oprogramowanie, które (w uproszczeniu) kradnie dane i żąda okupu w zamian za (niepewną) obietnicę ich zwrotu.</p>
+
+        <p class="A">Otóż najpierw jakiś młody zdolny informatyk odkrywa, że w poważnym oprogramowaniu istnieje błąd.</p>
+
+        <p class="B">Tak jest, z tym, że wcale niekoniecznie młody. Takich ludzi zwyczajowo nazywa się badaczami bezpieczeństwa, <em>security researchers</em>. Niekoniecznie ograniczają się do <q>poważnego oprogramowania</q>. Szukają oni tzw. <q>podatności</q>, <em>vulnerabilities</em>, czyli nieoczywistych cech tego oprogramowania, które mogą być złośliwie wykorzystane. Podatności są w zasadzie skutkiem błędów w oprogramowaniu. Wszelkim oprogramowaniu, niekoniecznie od razu <q>poważnym</q> &ndash; w rozumieniu, iż napisanym przez znaną, wielką firmę. Kategoria badaczy jest też dość szeroka, w jej obrębie są specjalizacje rozróżniające podatności np. w oprogramowaniu wykonywanym na komputerze użytkownika od np. podatności w aplikacjach internetowych. Badacz zazwyczaj ma swoją dziedzinę, którą się zajmuje. W kontekście złośliwego oprogramowania istotne jest to, że badacze poszukują podatności, które nadają się do wykorzystania w celu przeprowadzenia różnych złośliwych działań np. uzyskania dostępu do danych, przejęcia kontroli nad działającym oprogramowaniem itd. </p>
+
+        <p class="B">Istnieją też podatności lub błędy, które nie są szkodliwe, albo w gruncie rzeczy nie są wcale błędem; albo są błędem, ale nie błędem programisty, tylko analityka procesu biznesowego, który <q>ogarnia</q> szerszy cel produkowania oprogramowania. W branży często żartobliwie mówi się wówczas <em>it's not a bug, it's a feature</em>.</p>
+
+        <p class="A">Ta informacja rozpływa się po kręgach hackerskich lub zostaje sprzedana (za ciężkie pieniądze) jednej z wielu grup hackerów. </p>
+
+        <p class="B">Pozyskiwanie tej wiedzy to cały przemysł i rynek. Są ludzie, którzy żyją z tego, że sprzedają tę wiedzę do dużych firm w ramach inicjatyw tzw. <em>bug bounty</em>. Duże firmy są skłonne płacić ludziom z zewnątrz za znalezienie groźnych błędów, które z różnych przyczyn nie zostały wyeliminowane przez ich własnych programistów. Czasami jednak ktoś inny jest w stanie zapłacić za tę wiedzę jeszcze więcej. Np. państwowe służby specjalne, albo producent profesjonalnego oprogramowania szpiegującego jak np. Pegasus. <q>Grupy hackerów</q> to tylko niewielki element znacznie większej układanki. </p>
+
+        <p class="A">Ci piszą oprogramowanie umożliwiające wejście w tą lukę bezpieczeństwa. </p>
+
+        <p class="B">Generalnie tak. Takie oprogramowanie piszą profesjonalni programiści i/lub hakerzy. Potrzebne tutaj są ponadprzeciętne kompetencje, ponieważ mówimy o pisaniu programu w sposób zupełnie odmienny od podręcznikowego. Należy wykorzystać przy tym te kupione od badacza zaobserwowane właściwości i zachowania w oprogramowaniu, które nie są opisane w żadnym innym źródle informacji (zakładając, że badacz był jedyną osobą, która znalazła podatność) i nie ma absolutnie żadnych gwarancji do absolutnie żadnego aspektu ich działania. Te właściwości i zachowania mogą być bardzo niestabilne, w sensie &ndash; raz działać, a raz nie działać w zależności od, trudno właściwie określić czego. Generalnie, rozwiązanie techniczne na którym opiera się taki Pegasus jest trochę taką prowizorką posklecaną na sznurki i taśmę klejącą. Wiadomo na przykład, że Pegasus nie był w stanie przetrwać restartu urządzenia. To swoją drogą tworzy ciekawą okazję dla wszelkich aferzystów, ponieważ powstaje pytanie jak liczyć tzw. włamania. Czy włamaniem jest sam fakt ukierunkowania ataku na konkretną osobę (liczymy jeden raz), liczymy ile razy Pegasus został uruchomiony na urządzeniu ofiary. Jeśli ofiara często wyłączała telefon, to możemy wtedy podać komunikat medialny, że ofiara była infekowana powiedzmy 57 razy, a tak naprawdę po prostu tyle razy restartowała telefon. </p>
+
+        <p class="B">Aspekt niestabilności należy też przywołać w kontekście wątku Twitter'owego na temat śladów pozostawionych przez Pegasusa. Wyciąga się tam, skądinąd słuszne, wnioski, że Pegasus musiał być niskiej jakości produktem, skoro pozostawił ślady. Bardzo możliwe, że ze względu właśnie na tę <q>prowizorkę</q> w postaci błędu, która jest fundamentem działania Pegasusa, nie było nawet technicznej możliwości, żeby nie zostawić śladów (pamiętajmy, że cały czas mówimy o programie, który działa nie w oparciu o programistyczną dokumentację firmy Apple, tylko w oparciu o zauważenie specyficznych zachowań oprogramowania w specyficznych okolicznościach). </p>
+
+        <p class="B">Warto również w tym kontekście odnieść się do tweet&rsquo;a, którego istotą jest próba uargumentowania, dlaczego możemy uważać, że nie był to zbyt solidny program: </p>
+
+        <p class="A">Nieszyfrowane nazwy zmiennych, nie szyfrowany kod, otwarte nazwy serwerów, ślady w logach </p>
+
+        <p class="B">Wyliczane są rzekome słabości oprogramowania, ale te słabości, jeśli by były naprawione, to też wcale nie świadczyły by zastosowaniu uznanych standardów bezpieczeństwa. Dwie początkowe cechy, to kategoria tzw. <em>security by obscurity</em> Są to działania, które służą przede wszystkim zmyleniu osób próbujących rozpracować program i nie dają formalnej gwarancji zabezpieczenia. Zakładam, że konkretnie chodzi tu o tzw. <q>obfuskację (zaciemnienie)</q> kodu programu (w kwestię szyfrowania kodu programu w rozumieniu kryptograficznym z zastosowania algorytmu z kluczem symetrycznym, czyli hasłem, nie będę wchodzić, ponieważ to też nie jest gwarancja bezpieczeństwa, choć złośliwe programy czasami tak robią, ale to hasło musi być koniec końców fizycznie obecne w nich samych i znów problemem jest tylko to, jak długo badacz będzie musiał go szukać). Wracając do klasycznej obfuskacji &ndash; faktycznie jest ona spotykana w językach programowania używanych dla telefonów komórkowych (Java). Czyli powiedzmy, że nazwy zmiennych i kod są jakoś <q>zaszyfrowane</q> w tym kontekście. Te metody nie stanowią jednak realnego zabezpieczenia kodu programu. Polegają one po prostu na skomplikowaniu instrukcji wykonywanych przez komputer w ramach programu tak, aby skutek ich wykonania był taki sam, ale zrozumienie ich sensu przez obserwującego człowieka było utrudnione. Na przykład poprzez zamianę nazw zmiennych na bezsensowne ciągi znaków (świetne zabezpieczenie &#128521;). Albo poprzez wielokrotne <q>skakanie</q> po różnych instrukcjach programu tak, aby na koniec i tak wrócić do właściwego miejsca (jeszcze lepsze zabezpieczenie &#128521;). </p>
+
+        <p class="B">Doświadczony badacz inżynierii wstecznej będzie w stanie prześledzić krok po kroku działanie dowolnego programu wykonującego się na komputerze. Jedynym problemem tutaj jest pracochłonność tego procesu, ale z całą pewnością jest to praktycznie zawsze wykonalne (w końcu jeśli jakiś program wykonuje się na komputerze, to możemy tak długo obserwować skutki działania poszczególnych jego fragmentów, że w końcu odtworzymy logikę tego, co on robi). </p>
+
+        <p class="B">Dalej, gdyby nazwy serwerów były <q>zamknięte</q>, chociaż nie do końca rozumiem co to znaczy, ale wykonując dowolny program na komputerze, zawsze będziemy w stanie zaobserwować z jakimi adresami sieciowymi próbuje on się skomunikować. Tego się nie da ukryć. To trochę tak, jakby pomalować czarną farbą rozkład jazdy autobusów na przystanku i twierdzić, że od tej pory nikt nie będzie w stanie poznać tras, jakimi one jeżdżą. Ale można przecież zawsze pojechać za autobusem i poznać jego trasę &#128521;. Natomiast jeśli chodzi o <q>ślady w logach</q>, faktycznie, jeśli działający na telefonie ofiary Pegasus coś logował, to nie brzmi to rozsądnie w przypadku programu, który z definicji miał być przynajmniej w pewnym stopniu trudny do wykrycia. </p>
+
+        <p class="B">Ponadto błędy, których używa się do wyprodukowania programu typu Pegasus mogą zostać w każdej chwili wyeliminowane przez autorów oryginalnego oprogramowania, którzy mogą nagle po prostu zorientować się, że popełnili kardynalny błąd. Dlatego taki programista piszący Pegasusa ma bardzo trudne zadanie i to z całą pewnością nie są nastoletni amatorzy hackowania. Natomiast zupełnie oddzielną kwestią, i ciekawą samą w sobie, jest to, kto takich autorów opłaca i jakie ma w tym cele biznesowe. </p>
+
+        <p class="B">W tym miejscu, uwzględniając powyższe rozumowanie wraz z bardzo precyzyjnymi informacjami od mediów należy wspomnieć o możliwości wyprowadzenia wniosków kluczowych dla oceny całej afery. Taką precyzyjną informacją jest fakt ujawnienia przez Panią Prokurator komunikatu, jaki otrzymała ona od firmy Apple. Komunikat ten ostrzega, że jej urządzenie najprawdopodobniej było celem ataku sponsorowanego przez państwo. Ta informacja jest praktycznie niemożliwa do podważenia. Firma Apple nie jest zadowolona z tego, że inna firma (producent Pegasusa) wykorzystuje fatalne w skutkach błędy w jej oprogramowaniu, które umożliwiają produkcję takich narzędzi do inwigilacji. To jest szkodliwe dla ich wiarygodności, wizerunku i w konsekwencji ich biznesu. Dlatego w listopadzie 2021 roku firma Apple weszła w spór sądowy z NSO Group, producentem Pegasusa. </p>
+
+        <p class="B">Tak na marginesie, ciekawe jest to, jakim cudem ten biznes kręcił się wcześniej. Przecież ten konflikt interesów był oczywisty i nietrudno było przypuszczać, że coś się tutaj rozsypie. Ktoś naprawi któryś z błędów, ktoś komuś powie o którymś błędzie, ktoś z kadry zarządzającej stwierdzi, że tego nie można dalej tolerować itd. i całość przestanie działać. Dlatego nie można wykluczyć sugestii o wielopoziomowej grze operacyjnej służb specjalnych silniejszego państwa, wycelowanej w inne państwa, które miały być klientami Pegasusa. </p>
+
+        <p class="B">Firma Apple jest w stanie skutecznie utrudnić życie swojemu przeciwnikowi, ponieważ praktycznie każde poważne oprogramowanie posługuje się tzw. telemetrią, czyli zbieraniem statystycznych, technicznych informacji o tym, w jaki sposób oprogramowanie działa na urządzaniach faktycznych użytkowników i wysyłaniem ich do producenta. Sama telemetria to wbrew pozorom nic złego i wcale nie musi być naruszeniem prywatności. Np. jeśli w jakimś oprogramowaniu dodano nową funkcję uruchamianą nowym przyciskiem, to producent chętnie chciałby się dowiedzieć jak często i w jakich okolicznościach użytkownicy klikają w przycisk. Jeśli klikają rzadziej niż producent się spodziewa, to może przycisk ma nieodpowiedni kolor, wielkość, umiejscowienie itp. Może trzeba coś zmienić. Może dział odpowiedzialny za PR niezbyt skutecznie zakomunikował wprowadzenie nowej funkcji. W ten sposób za pomocą telemetrii ukierunkowuje się rozwój oprogramowania. Telemetria to również mnóstwo danych technicznych. Te dane pozwalają firmie Apple wnioskować, co dzieje się na urządzeniu. Gdy szczegóły techniczne dot. Pegasusa stały się bardziej jawne, zapewne w związku ze sporem sądowym, firma Apple zapewne zdobyła informacje (alba sama zorientowała się gdzie popełniła błędy, to również możliwe, również przypadkowo) o tym, jakie konkretnie błędy są w nim wykorzystywane. Następnie wpadli na genialny pomysł, by dodatkowo utrudnić życie swojemu przeciwnikowi: przeszukali swoje dane pochodzące z telemetrii i wyciągnęli na ich podstawie wniosek, na których konkretnie urządzeniach został wykorzystany błąd, o którym wiedzieli, że znany był producentowi Pegasusa. Wiadomo też było, że producent sprzedaje Pegasusa jedynie państwom, a nie klientom indywidualnym, bo ceny licencji są zaporowe. Kolejnym krokiem było poinformowanie użytkowników tych urządzeń, co im zrobiono. To potężny strzał w producenta Pegasusa i jego klientów (czyli służby państwowe). Ich biznes jest fundamentalnie zachwiany: nie dość, że błędy w oprogramowaniu Apple, na którym bazowali zostały ujawnione i naprawione (fundamenty na których działał Pegasus mogły zostać w istotnym stopniu zburzone), to dodatkowo ich klienci (służby państwowe), którym zapewne ekstremalnie zależy na dyskrecji zostali zdemaskowani i tym samym skompromitowani. Właśnie w tym miejscu dopiero znajduje się <q>punkt wejścia</q> do całej polskiej afery. <strong>W mojej ocenie z prawdopodobieństwem graniczącym z pewnością, możemy uznać, że nasz rząd posiadał i używał Pegasusa wycelowanego przynajmniej w te osoby, które otrzymały komunikat bądź w te osoby, których telefony zbadało kanadyjskie laboratorium. Jest to praktycznie pewne, że tak po prostu było</strong>. W tym przypadku akurat nie sprawdziło się powiedzenie, <q>gdzie dwóch się bije, to trzeci korzysta</q>. Mi osobiście kojarzy się raczej inne: <q>kiedy Padyszachowi wiozą zboże, kapitan nie tr</q>. Chyba ostatnim z możliwych zmartwień firmy Apple było to, jak klienci Pegasusa wytłumaczą się przed swoimi wyborcami. Firma Apple oddała po prostu celny strzał w biznes swojego przeciwnika żeby chronić swoje interes </p>
+
+        <p class="B">Informacje o posiadaniu Pegasusa pojawiały się w przestrzeni medialnej już kilka lat temu, ale nie były w żaden sposób potwierdzone ani weryfikowalne. Żaden z klientów producenta Pegasusa zapewne nie spodziewał się (chociaż gdy teraz o tym myślę, to aż się trochę dziwię), że taki fundamentalny konflikt biznesowy (chociaż dość oczywisty) między dwiema firmami produkującymi oprogramowanie (będącymi w dość dziwacznej relacji &ndash; jedna żeruje na błędach popełnionych przez drugą) finalnie doprowadzi do zdemaskowania użytkowników narzędzia. Zdemaskowanie to jest w mojej ocenie bardzo wiarygodne, ponieważ firma Apple jest w posiadaniu całej wiedzy dot. wszystkich elementów zaangażowanych w działanie Pegasusa. Czyli dokładniej: które błędy zostały użyte na których urządzeniach oraz jak objawia się użycie tych błędów poprzez Pegasus. </p>
+
+        <p class="A">I teraz najciekawsze!!! Nie atakuje się pojedynczego komputera!!! Atakuje się wszystko jak leci, z jakiegoś kraju, miasta, domeny, sieci, ale tylko w celu sprawdzenia, gdzie są te dziury! </p>
+
+        <p class="B">W powyższym zdaniu zostały wymieszane bardzo różne aspekty technologiczne, które mogą, ale zazwyczaj nie są ze sobą powiązane. </p>
+
+        <p class="B">Po pierwsze, oprogramowanie typu Pegasus jest bardzo precyzyjnie wycelowane w konkretne ofiary, ponieważ licencje są ekstremalnie drogie. Tak drogie, żeby tylko służby państwowe były w stanie je opłacić. </p>
+
+        <p class="B">Po drugie, faktycznie istnieją gałęzie złośliwego oprogramowania, w których atakuje się <q>wszystko jak leci</q>. Ale to zupełnie inne gałęzie niż Pegasus. Taką gałęzią mogą być np. tzw. botnet'y czyli ataki, których celem jest przejęcie kontroli nad jak największą liczbą komputerów zwykłych, nieświadomych niczego użytkowników. Posiadanie kontroli nad ogromną liczbą komputerów może być przydatne do przeprowadzenia zmasowanego ataku na jakąś usługę w internecie i tym samym wyrządzenia biznesowi tej usługi szkód finansowych poprzez jej <q>zapchanie</q> (<em>distributed denial of service</em>) </p>
+
+        <p class="B">Powiązanie sformułowania <q>atakuje się wszystko jak leci</q> ze skanowaniem sieci jest trochę zbyt daleko idącym uproszczeniem. Skanowanie sieci to forma rekonesansu, wstępnego rozeznania po uzyskaniu dostępu do czyjejś sieci. To nie jest jeszcze atak. Ponadto powiązanie tego sformułowania z Pegasusem jest raczej nieadekwatne, ponieważ Pegasus działał o oparciu znalezione błędy w oprogramowaniu, którego przeważnie używają ludzie, których klienci Pegasusa chcieliby podsłuchiwać. Konkretnie mam tutaj na myśli użytkowników telefonów komórkowych. Ich się raczej nie skanuje. Nie jestem pewien, ale wydaje mi się, że telefony komórkowe mogą nawet nie mieć publicznego adresu IP, więc nawet nie bardzo sobie wyobrażam jak przeprowadzić takie hipotetyczne skanowanie, ale tutaj musiałby się wypowidzieć ktoś bardziej kompetentny w obszarze telekomunikacji. Bo możliwe że z wykorzystaniem sieci 5G i adresów IP w wersji 6 można teoretycznie przeprowadzić skanowa nie portów na telefonach. </p>
+
+        <p class="B">Hipotetyczną ścieżkę do zainfekowania się Pegasusem wyobrażam sobie tak: producent Pegasusa wszedł w posiadanie wiedzy o błędzie w oprogramowaniu do czytania poczty e-mail na telefonie komórkowym. Zapłacił za to 7 cyfrową kwotę w dolarach, ponieważ błąd nie jest jeszcze nigdzie opisany i pozwala na wykonanie dowolnych czynności na urządzeniu ofiary po wysłaniu do niej jedynie email'a. Z punktu widzenia ofiary, podczas czytania email'a nie dzieje się nic podejrzanego. W rzeczywistości w tle pobierany jest plik zawierający program Pegasusa i (prawdopodobnie wykorzystując jeszcze inne błędy) ten program jest instalowany na urządzeniu ofiary w sposób niewidoczny. Program ten nawiązuje łączność z <q>operatorem</q> po drugiej stronie Pegasusa i rozpoczyna się cały proceder. </p>
+
+        <p class="A">Za moich czasów mówiło się na to <q>czesanie sieci bądź skanowanie</q>. Następnie sprawdza się, co się <q>złapało</q>, czyli komputery o jakich adresach są podatne na atak. I dopiero teraz zaczyna się atak właściwy! </p>
+
+        <p class="B">Skanowanie sieci przeprowadza się w okolicznościach,gdy spodziewamy się znaleźć w czyjejś sieci jakieś działające usługi sieciowe. Na telefonach komórkowych nie spodziewamy się by działały jakieś usługi. Przez usługę rozumiemy np. serwer stron internetowych bądź serwer tzw. API działającego z wykorzystaniem protokołu HTTP na tzw. porcie IP o numerze 80 (upraszczając) do którego można wysyłać polecenia i odbierać dane. Poprzez działanie usługi rozumiemy, iż port IP o właściwym dla niej numerze jest otwarty. Skanowanie sieci polega na wyszukiwaniu takich otwartych portów w celu rozeznania jakie usługi i w jakich wersjach są uruchomione na komputerach podłączonych do sieci. Na podstawie tej wiedzy można podjąć działania atakujące wykorzystując błędy dotyczące tych konkretnych usług w tych konkretnych znalezionych w tej sieci wersjach. Jeśli na urządzeniu (komputerze, bądź telefonie, który de facto jest komputerem) nie są uruchomione żadne usługi, to żadne porty IP nie powinny być na nim otwarte. Na poprawnie działającym telefonie nie powinny być uruchomione żadne usługi, które byłyby widoczne z punktu widzenia obserwatorów podłączonych do tej samej sieci, co ten telefon. Dlatego koncept skanowania sieci nie bardzo pasuje mi do oprogramowania wycelowanego w telefony komórkowe. </p>
+
+        <p class="B">Należy doprecyzować też, co rozumiemy pod używanym w toku tego wyjaśnienia pojęcia <q>sieci</q>;. Generalnie skanuje się komputery w jakiejś sieci prywatnej np. firmowej, do której uzyskało się dostęp. Chociaż technicznie teoretycznie nic nie stoi na przeszkodzie, aby skanować komputery w obrębie całego internetu, to jednak istnieje szereg praktycznych przeciwwskazań żeby to robić. Przede wszystkim jest to złamanie regulaminu chyba każdego dostawcy internetu, co może być przyczyną wypowiedzenia umowy. Ponadto urządzenia działające w sieciach prywatnych (również w naszych domach) są chronione przed takimi skanowaniami przez szereg skutecznych mechanizmów izolujących (NAT i firewall) które działają w modemach internetowych. We wczesnych latach 200x, gdy modemy były urządzeniami znacznie prostszymi i nie posiadały jeszcze takich mechanizmów izolacji, to na komputerze bezpośrednio podłączonym do takiego modemu (czyli światowego internetu) można było zaobserwować bardzo częste skanowania portów (teraz w sumie też można by było, ale nikogo to nie interesuje, bo modem to z definicji blokuje). To, że jest to niezgodne z regulaminem, to nie znaczy jeszcze, że nikt nie próbuje. Oczywiście można skanować całe zakresy adresów IP należących do internetu. Można w ten sposób wyszukiwać udostępnione w internecie różne usługi sieciowe i można próbować je atakować (teoretycznie, po praktycznie, to skanowanie jest naruszeniem regulaminu a atakowanie chyba nawet przestępstwem). Tutaj znów sam się zastanawiam jak to jest w przypadku telefonów komórkowych, ale wydaje mi się, że infrastruktura operatora telefonii jest tak zaprojektowana, żeby zapewnić jakieś mechanizmy izolujące telefon komórkowy od obserwatorów podłączonych do internetu. Dlatego sama koncepcja skanowania w odniesieniu do Pegasusa, który z definicji jest projektowany dla telefonów komórkowych wydaje mi się nieadekwatna. </p>
+
+        <p class="A">Wybrane (z tych podatnych na atak) ciekawe komputery banków, dużych firm, rządowe są atakowane oprogramowaniem, które może wewnątrz uruchomić nasz kod wykradający, podmieniający lub szyfrujacy dane. </p>
+
+        <p class="B">Raczej tak, aczkolwiek te <q>ciekawe</q> komputery powinny być odizolowane od internetu. Ale posiadanie usługi dostępnej przez internet jest wygodne np. dostęp do poczty firmowej dla pracowników firmy. Dlatego taka usługa musi być <q>wystawiona</q> na świat z gigantyczną ostrożnością. A usługi, które nie muszą być <q>wystawiane</q> na świat, powinny być ograniczone tylko do wewnętrznej sieci firmowej. Komputery z tych sieci firmowych nie są dostępne dla skanowań portów z internetu. Więc to nie jest też tak, że wszystkie, dowolne komputery można zawsze próbować skanować. </p>
+
+        <p class="B">Czyli tak naprawdę nasze komputery są bezustannie atakowane, oblegane przez setki dziwnych programików, które kombinują, testują, jak się dostać do środka. </p>
+
+        <p class="B">Nasze domowe komputery też są odizolowane od internetu, jak sieci firmowe. W sensie mogą one nawiązywać połączenia z innymi komputerami, ale inne komputery nie mogą nawiązać bezpośredniej łączności z naszym komputerem. Tę izolację zapewniają nasze modemy dostępowe do internetu i działające na nich mechanizmy NAT i firewall. Pomijam tutaj kwestię celowego uruchomienia jakiejś usługi na domowym komputerze i wystawienia jej na świat poprzez specjalną regułę wyjątku w mechanizmie NAT. Tak też czasami się robi. </p>
+
+        <p class="B">Oczywiście współczesne ataki cyber przestępców projektowane są z uwzględnieniem tego, że NAT i firewall są praktycznie wszędzie. Dlatego obecnie uważa się, że najskuteczniejszą formą ataku jest atak socjotechniczny czyli tzw. phishing. Jest on w swojej istocie zaskakująco prosty koncepcyjnie: <strong>wyślijmy do ofiary wiarygodnie wyglądającą wiadomość i jakoś ją przekonajmy żeby sama sobie zainstalowała złośliwy program</strong>. To zdumiewające, że współczesne ataki to praktycznie w większości właśnie coś takiego. Dużo łatwiej jest wycelować socjotechnikę w dużą liczbę ludzi (statystycznie zawsze ktoś się da nabrać i korzyści będą) niż wyszukiwać, bądź kupować od kogoś jakieś błędy w oprogramowaniu, do których potem trzeba napisać od zera złośliwe oprogramowanie je wykorzystujące. Tak więc te całe skanowania, to jest jest jak najbardziej działająca technika wyszukiwania miejsc w których możemy dalej szukać podatności (otwarty port IP czyli, uruchomiona usługa to jeszcze nie jest podatność, usługa może być technicznie bardzo dobrze zabezpieczona przed nieuprawnionym użyciem), ale po pierwsze nie jest to nawet jeszcze żadna forma ataku, a po drugie nie jest ona kluczowa z punktu widzenia profesjonalnych cyber przestępców, po trzecie producent Pegasusa nie jest klasycznym cyber przestępcą i działa w oparciu o zupełnie inne techniki (wyszukiwanie błędów) tak, aby jego produkt był dokładnie skrojony na potrzeby jego klientów. </p>
+
+        <p class="A">Pegasus najprawdopodobniej robił to samo, <q>czesał</q> sieć, już jako oprogramowanie wyprodukowane przez prywatną firmę. Dopiero po uzyskaniu zlecenia od osoby, która posiadała abonament dokonywał właściwego ataku. </p>
+
+        <p class="B">Tutaj trudno spekulować, czy Pegasus stosował jakieś aktywne formy poszukiwania urządzeń podatnych na to, żeby dało się go na nich zainstalować. Ale jak opisałem wcześniej, taka metoda działania nie bardzo tutaj pasuje do jego modelu biznesowego. Ale dopuszczam taką możliwość. </p>
+
+        <p class="A">Jeśli sprawdzicie logi w jakimś mało istotnym urzędzie, to może się okazać, że też są tam setki śladów, po atakach Pegasusa, oraz kolejne setki śladów po atakach dziesiątek innych wirusów. </p>
+
+        <p class="B">Nie sądzę, ale ciekawe byłoby usłyszeć, co ma do powiedzenia administrator w urzędzie. Taki administrator pewnie nawet nie zwraca uwagi na logi skanowań portów z internetu w kierunku jego sieci. Bo one są blokowane przez praktycznie każdy router. Co innego, gdyby taki administrator odkrył, że coś skanuje porty w wewnętrznej sieci urzędu. To by oznaczało, że w sieci już jest intruz. Mógł się do niej dostać na mnóstwo sposobów np. przekonać jakiegoś urzędnika żeby na urzędniczym komputerze wykonał jakieś czynności i przy okazji uruchomił złośliwy program. Tak to zazwyczaj wygląda. </p>
+
+        <p class="A">Tak więc ta przerażająca liczba 6000 ataków przez 2 lata na NIK z punktu widzenia laika jest wstrząsająca, ale z informatycznego punktu widzenia, jest całkiem zwyczajna. </p>
+
+        <p class="B">Ta liczba podana kilka dni temu faktycznie jest dziwna, nie wiem jak oni to liczyli. Przemknęły mi gdzieś jakieś nagłówki, że liczono połączenia sieciowe, a to już jest spore nadużycie. Mogę sobie wyobrazić zupełnie hipotetyczną sytuację, że Pegasus ze względu na swój brak stabilności w działaniu często zrywa połączenia sieciowe i musi je ponawiać powiedzmy co pół minuty. W logach zobaczymy wtedy tysiące połączeń &#129315;. Nie wiem czy tak było, ale zachowałbym powściągliwość w ekscytowaniu się. W tym całym technicznym obszarze jest mnóstwo miejsc, gdzie można dokonać takiego chwytliwego informacyjnego nadużycia. Jedyne czego można być pewnym to to, że Pegasus był użyty u tych konkretnych ludzi. To jest praktycznie pewne. Oczywiście etyczna ocena tego w kontekście politycznych mocodawców operatorów polskiego Pegasusa z miedzianym czołem twierdzących, że wszystko było zgodne z prawem i nic złego się nie wydarzyło wykracza poza ramy tego opracowania. </p>
+
+        <p class="A">Ciekaw byłbym wywiadu z jakim profesjonalnym administratorem dużej sieci, który opowiedziałby, ile ataków dziennie przeżywa np. komputer w dużym szpitalu albo dużej notowanej na giełdzie firmie. </p>
+
+        <p class="B">Mnie by właśnie interesowało, jakie działania on klasyfikuje jako próbę ataku. </p>
+
+        <p class="A">Oczywiście od czasów, kiedy się o te sprawy otarłem minęli, już wiele lat, ale zasady działania komputerów i czarnego rynku oprogramowania wirusowego się chyba się bardzo nie zmieniły 😅</p>
+
+        <p class="B">Zmieniły się fundamentalnie. Zmieniły się niesamowicie. Sam jestem w szoku, gdy na to patrzę, a siedzę w technologiach informatycznych nie na tyle długo, żebym mówił o sobie, że jestem jakimś dinozaurem (chociaż całkiem możliwe że są już tacy, dla których jestem). Pamiętam początek lat 90. Pamiętam program MKS_VIR i jego funkcjonalność atlasu demonstracyjnego wirusów. Kiedyś wirusy były zabawkami pisanymi przez nudzących się programistów dla zabawy. Na przykład wirus, którego efektem były znienacka spadające literki z istniejących linii tekstu na ekranie komputera. W drugiej połowie lat 90 zaczęło się robić poważniej, np. wirus CIH zwany też <q>Czarnobylem</q> potrafił trwale zamazać kość pamięci oprogramowania układowego na komputerze i de facto go zniszczyć. Koniec lat 90 to również pojawienie się nowych wynalazków, już nie tyle wirusów, co tzw. trojanów, back-door&rsquo;ów. Programów do przejmowania kontroli nad komputerami, poprzez coś w rodzaju <q>tylnych drzwi</q> ukrytych przed użytkownikiem. Słynny NetBus, czy rodzimy Prosiak, który zapewne doprowadził do stanu przedzawałowego niejednego nauczyciela informatyki w polskim gimnazjum, gdy musiał on diagnozować niewytłumaczalne, magiczne, nadprzyrodzone, samoczynne otwieranie się napędów CD-ROM podczas lekcji, ale tylko na lekcjach u określonych klas &#128513;. Ale wówczas to nadal była technologiczna nisza, takie trochę zabawki. Początek lat 2000 to już poważniejsze sprawy. Zaczynamy mówić o <q>robakach</q>, automatycznie kopiujących się przez internet. Słynny <q>I love you</q> napisany w dialekcie języka Basic, uważanego przez niektórych profesjonalistów jako mający tylko niewielkie możliwości. Zaczyna mówić się o <em>keylogger'ach</em>, czyli wirusach, które technicznie nie szkodzą, tylko zbierają wszystkie wpisywane na klawiaturze dane. I je wykradają. W celach zarobkowych. Zaczyna się tworzyć na tym biznes. W drugiej połowie dekady jest jeszcze poważniej, wyodrębnia się coraz to nowe, niezwykle egzotyczne pod względem technicznym gałęzie złośliwego oprogramowania jak np. <em>rootkit'y</em>. Chociaż nie wyewoluowały one w formę istotną obecnie, ale warto przytoczyć choćby sylwetkę niezwykle utalentowanej polskiej badaczki Joanny Rutkowskiej, która w 2006 rozpoczęła w branży dyskusję o możliwości napisania wirusa komputerowego, który byłby w 100% niewykrywalny z wykorzystaniem środków technicznych które ówcześnie były nowościami w branży (tzw. wirtualizacja sprzętowa). W sumie to nie tylko rozpoczęła ona dyskusję, ale pokazała również działający prototyp (<q>Blue Pill</q>), przed którym cała ówczesna technologia antywirusowa rozłożyła bezradnie ręce. Niektóre wnioski z tamtych czasów przerodziły się w faktycznie działające współcześnie w naszych komputerach z systemem Windows rozwiązania programowe, które wykorzystują właśnie sprzętową wirtualizację w celu ochrony przed wirusami (zaawansowane opcje programu Microsoft Defender używające technologii HyperV). Dalej, lata 201x to już jest eksplozja &ndash; botnety, ransomware &ndash; czyli zarabianie na wyłudzaniu okupów za zaszyfrowane dane, ataki na skalę przemysłową, przeprowadzane przez służby państwowe, które wprawiają w zdumienie nawet profesjonalistów z branży &ndash; atak Stuxnet zaprojektowany przez USA i Izrael i wycelowany w przemysłowe ośrodki badań jądrowych w Iranie, przez wiele lat nierozpracowany technicznie. Wszechobecny phishing, zalecanie sprzętowych kluczy przy uwierzytelnianiu dwu-składnikowym. Eksperci twierdzą, że absolutnie każdy człowiek może zostać oszukany i nakłoniony do zainstalowania sobie złośliwego oprogramowania. A końcówka dekady to już kompletny <em>hardcore</em> techniczny, pojawienie się informacji o atakach Meltdown i Spectre, które wykorzystują błąd w&hellip; procesorze. Tak, to też możliwe. We wszystkich procesorach Intel&rsquo;a sprzed ok 2018 roku znajdują się błędy projektowe możliwe do wykorzystania w złośliwym oprogramowaniu (dla uspokojenia odbiorców warto jednak dodać, że producenci systemów operacyjnych nie byli na szczęście bezbronni &ndash; możliwe było zmitygowanie zagrożenia w znaczącym stopniu kosztem wykonywania pewnych operacji dłuższą, okrężną drogą, ale ponoć nie można mówić o wyeliminowaniu zagrożenia w 100%). Ktoś mógłby powiedzieć, że to nic nowego, bo już w 1994 roku zdarzyło się firmie Intel wyprodukować pokaźną ilość procesorów z błędem podczas dzielenia liczb (<em>Pentium FDIV bug</em>), ale to drobnostka w porównaniu do współczesnych odkryć, bo wówczas problemem chyba były tylko zawieszające się gry </p>
+
+        <p class="B">To wszystko stanowi niesamowitą i fascynująca historię, a wymienione przeze mnie przykłady, to tylko straszliwie wybiórcze fragmenty &ndash; wyliczam je z głowy&hellip; </p>
+
+    </article>
 
 </body>
 
